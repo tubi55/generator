@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    function* generator(){
+      yield test1();
+      yield test2();
+      yield test3();
+    }
+
+    const result = generator();
+    const val1 = result.next();
+    console.log(val1);
+   
+    const val2 = result.next();
+    console.log(val2);
+
+    const val3 = result.next();
+    console.log(val3);
+
+    const val4 = result.next();
+    console.log(val4);
+
+    function test1(){
+      console.log('test1');
+      return 'test1';
+    }
+
+    function test2(){
+      console.log('test2');
+      return 'test2';
+    }
+
+    function test3(){
+      console.log('test2');
+      return 'test3';
+    }
+  </script>
+</body>
+</html>
